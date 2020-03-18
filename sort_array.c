@@ -40,7 +40,7 @@ static void render(sort_array *arr) {
   }  
   SDL_RenderPresent(arr->renderer);
 
-  SDL_Delay(100);
+  SDL_Delay(10);
 }
 
 
