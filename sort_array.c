@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <stdio.h>
 
 #include "sort_array.h"
 
@@ -22,6 +23,12 @@ static int sort_array_init_view(sort_array *arr);
 static void sort_array_free_view(sort_array *arr);
 static void render_sort_array(sort_array *arr, unsigned int delay);
 
+void sort_array_print(sort_array *arr)
+{
+  for(int i=0; i < arr->size; i++)
+    printf("%d, ",arr->data[i]);
+  printf("\n");
+}
 
 /* create a sort_array corresponding to a permutation of size s*/
 sort_array* sort_array_new (long s, bool is_identity)
@@ -71,7 +78,7 @@ void shuffle (sort_array *arr)
     {
       int j = rand()%(arr->size - i) + i; 
       if( i != j)
-	sort_array_swap(arr, i, j, 1);
+	sort_array_swap(arr, i, j, 0);
     }
 }
 

@@ -1,11 +1,11 @@
 #include "sort_array.h"
 #include "sorting_strategy.h"
 
-#define ARRAY_SIZE 160
+#define ARRAY_SIZE 1280
 
 int main(void)
 {
-  sorting_algo algos[1] = {insertion_sort};
+  sorting_algo algos[] = {merge_sort};
   
   sort_array *arr = sort_array_new(ARRAY_SIZE, 0);
 

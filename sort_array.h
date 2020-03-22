@@ -18,4 +18,7 @@ int sort_array_get (sort_array *array, long index);
 void sort_array_set (sort_array *array, long index, int value, unsigned int delay);
 void sort_array_swap(sort_array *array, long i, long j, unsigned int delay);
 
+void sort_array_print(sort_array *array);
+
+
 #endif
