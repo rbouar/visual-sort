@@ -1,7 +1,7 @@
 #include "sort_array.h"
 #include "sorting_strategy.h"
 
-#define ARRAY_SIZE 100
+#define ARRAY_SIZE 200
 
 int main(void)
 {

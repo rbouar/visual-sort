@@ -3,8 +3,8 @@
 
 #include <stdbool.h>
 
-#define SCREEN_WIDTH 720
-#define SCREEN_HEIGHT 480
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
 
 typedef struct sort_array sort_array;
 
@@ -15,8 +15,8 @@ void shuffle (sort_array *array);
 
 int sort_array_size(sort_array *array);
 int sort_array_get (sort_array *array, long index);
-void sort_array_set (sort_array *array, long index, int value);
-void sort_array_swap(sort_array *array, long i, long j);
+void sort_array_set (sort_array *array, long index, int value, unsigned int delay);
+void sort_array_swap(sort_array *array, long i, long j, unsigned int delay);
 
 int sort_array_init_display(sort_array *array);
 void sort_array_quit_display(sort_array *array);

@@ -19,12 +19,14 @@ struct sort_array {
 };
 
 //clear screen with black color
-static void clear_screen(sort_array *arr) {
+static void clear_screen(sort_array *arr)
+{
   SDL_SetRenderDrawColor( arr->renderer, 0x00, 0x00, 0x00, 0xFF ); //black
   SDL_RenderClear( arr->renderer );
 }
 
-static void render(sort_array *arr) {
+static void render_sort_array(sort_array *arr, unsigned int delay)
+{
   clear_screen(arr);
   
   SDL_SetRenderDrawColor( arr->renderer, 0xFF, 0xFF, 0xFF, 0xFF ); //white
@@ -40,7 +42,7 @@ static void render(sort_array *arr) {
   }  
   SDL_RenderPresent(arr->renderer);
 
-  SDL_Delay(10);
+  SDL_Delay(delay);
 }
 
 
@@ -93,7 +95,7 @@ void shuffle (sort_array *arr)
     {
       int j = rand()%(arr->size - i) + i; 
       if( i != j)
-	sort_array_swap(arr,i,j);
+	sort_array_swap(arr,i,j,1);
     }
 }
 
@@ -115,18 +117,18 @@ int sort_array_get (sort_array *arr, long i)
 
 
 /* set the value of the element at index i in arr to v */
-void sort_array_set (sort_array *arr, long i, int v)
+void sort_array_set (sort_array *arr, long i, int v, unsigned int delay)
 {
   assert(0 <= i && i < arr->size);
 
-  if(arr->displayable)
-    render(arr);
-  
   arr->data[i]=v;
+  
+  if(arr->displayable)
+    render_sort_array(arr, delay);  
 }
 
 
-void sort_array_swap(sort_array *arr, long i, long j)
+void sort_array_swap(sort_array *arr, long i, long j, unsigned int delay)
 {
   assert(0 <= i && i < arr->size);
   assert(0 <= j && j < arr->size);
@@ -136,7 +138,7 @@ void sort_array_swap(sort_array *arr, long i, long j)
   arr->data[j] = tmp;
 
   if(arr->displayable)
-    render(arr);
+    render_sort_array(arr, delay);
 }
 
 
