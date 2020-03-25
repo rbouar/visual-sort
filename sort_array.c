@@ -185,11 +185,14 @@ static void render_sort_array(sort_array *arr, unsigned int delay)
   SDL_SetRenderDrawColor( arr->renderer, 0xFF, 0xFF, 0xFF, 0xFF ); //white
 
   const int width = SCREEN_WIDTH/arr->size;
+  int height;
+  
   for(int i=0; i < arr->size; i++) {
-    SDL_Rect rect = {.x=i*width,
-		     .y=0,
-		     .w=width,
-		     .h=(SCREEN_HEIGHT*arr->data[i])/arr->size};
+    height = (SCREEN_HEIGHT*arr->data[i])/arr->size;
+    SDL_Rect rect = {.x = i*width,
+		     .w = width,
+		     .h = height,
+		     .y = SCREEN_HEIGHT-height };
     SDL_RenderFillRect(arr->renderer, &rect);
       
   }  
