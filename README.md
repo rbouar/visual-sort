@@ -3,7 +3,7 @@
 This project aims at showing the execution of different sorting algorithms.  
 Here is a list of supported sorting algorithms :
 - [X] Merge sort
-- [ ] Selection sort
+- [X] Selection sort
 - [X] Insertion sort
 - [ ] Bubble sort
 - [ ] Quick sort
