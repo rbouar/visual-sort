@@ -1,7 +1,7 @@
 #ifndef SORTING_STRATEGY
 #define SORTING_STRATEGY
 
-#include "sort_array.h"
+#include "../sort_array.h"
 
 typedef void (*sorting_algo)(sort_array *array);
 

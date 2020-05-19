@@ -4,7 +4,8 @@ LDFLAGS=-lSDL2
 
 EXEC=launch
 
-SRC=$(wildcard *.c)
+SRC = $(wildcard *.c) \
+      $(wildcard */*.c)
 OBJ=$(SRC:.c=.o)
 
 all: $(EXEC)
@@ -18,7 +19,7 @@ $(EXEC): $(OBJ)
 .PHONY: clean mrproper
 
 clean:
-	@rm -rf $(OBJ) *~
+	@rm -rf $(OBJ)
 
 mrproper: clean
 	@rm -rf $(EXEC)
