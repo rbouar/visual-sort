@@ -1,7 +1,7 @@
 #include "sort_array.h"
 #include "sort_algo/sorting_strategy.h"
 
-#define ARRAY_SIZE 1280
+#define ARRAY_SIZE 320
 
 int main(void)
 {

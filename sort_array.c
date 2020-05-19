@@ -2,7 +2,6 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
 #include <stdio.h>
 
@@ -138,7 +137,7 @@ static int sort_array_init_view(sort_array *arr)
       goto Quit;
     }
   
-  arr->window = SDL_CreateWindow("SDL2", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+  arr->window = SDL_CreateWindow("Sorting Algorithm Visualizer", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
   if(NULL == arr->window)
     {
       fprintf(stderr, "Erreur SDL_CreateWindow : %s", SDL_GetError());
@@ -163,6 +162,7 @@ static int sort_array_init_view(sort_array *arr)
   return 1;
 }
 
+
 static void sort_array_free_view(sort_array *arr)
 {
   SDL_DestroyRenderer(arr->renderer);
@@ -171,18 +171,20 @@ static void sort_array_free_view(sort_array *arr)
 }
 
 
-//clear screen with black color
 static void clear_screen(sort_array *arr)
 {
-  SDL_SetRenderDrawColor( arr->renderer, 0x00, 0x00, 0x00, 0xFF ); //black
+  SDL_Color bg = {63, 63, 63, SDL_ALPHA_OPAQUE };
+  SDL_SetRenderDrawColor( arr->renderer, bg.r, bg.g, bg.b, bg.a );
   SDL_RenderClear( arr->renderer );
 }
+
 
 static void render_sort_array(sort_array *arr, unsigned int delay)
 {
   clear_screen(arr);
-  
-  SDL_SetRenderDrawColor( arr->renderer, 0xFF, 0xFF, 0xFF, 0xFF ); //white
+
+  SDL_Color fg = {220, 220, 204, SDL_ALPHA_OPAQUE };
+  SDL_SetRenderDrawColor( arr->renderer, fg.r, fg.g, fg.b, fg.a );
 
   const int width = SCREEN_WIDTH/arr->size;
   int height;

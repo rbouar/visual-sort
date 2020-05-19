@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define DELAY 1
+#define DELAY 4
 
 /* fusionne [start, sep[ et [sep, end[ */
 static void merge(sort_array *arr, int start, int sep, int end)
