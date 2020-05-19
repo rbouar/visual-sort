@@ -5,7 +5,7 @@
 
 int main(void)
 {
-  sorting_algo algos[] = {selection_sort};
+  sorting_algo algos[] = {merge_sort, selection_sort, insertion_sort, bubble_sort};
   
   sort_array *arr = sort_array_new(ARRAY_SIZE, 0);
 
