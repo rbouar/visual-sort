@@ -2,17 +2,16 @@
 ## Summary
 This project aims at showing the execution of different sorting algorithms.  
 Here is a list of supported sorting algorithms :
-- [X] Merge sort
 - [X] Selection sort
-- [X] Insertion sort
 - [X] Bubble sort
-- [X] Quick sort
-- [X] Shell sort
-- [ ] Introsort
-- [ ] Heapsort
-- [ ] Cocktail shaker sort
 - [X] Comb sort
-- [ ] Odd–even sort
+- [X] Insertion sort
+- [X] Shell sort
+- [x] Odd–even sort
+- [X] Merge sort
+- [x] Quick sort
+- [ ] Heapsort
+- [ ] Smoothsort
 
 ## Compilation
 Type `make` for compiling the project.
