@@ -35,13 +35,11 @@ sort_array* sort_array_new (long s, bool is_identity)
   assert(s > 0);
   
   sort_array* arr = malloc(sizeof(sort_array));
-
   assert(arr);
 
-  // init model
-  arr->size        = s;
-  arr->data        = malloc(s*sizeof(int));
-
+  // init model FIXME: put it in a function
+  arr->size = s;
+  arr->data = malloc(s*sizeof(int));
   assert(arr->data);
 
   for(int i=0; i < s; i++)
@@ -50,7 +48,7 @@ sort_array* sort_array_new (long s, bool is_identity)
   if( !is_identity )
     shuffle(arr);
   
-  // init view  
+  // init view
   int exit = sort_array_init_view(arr);
   assert(!exit);
   
@@ -72,7 +70,6 @@ void sort_array_free (sort_array *arr)
 
 void shuffle (sort_array *arr)
 {
-  srand(time(NULL)); // use current time as seed for random generator
   for(int i=0; i < arr->size; i++)
     {
       int j = rand()%(arr->size - i) + i; 

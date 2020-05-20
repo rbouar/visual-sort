@@ -1,6 +1,5 @@
 #include "sorting_strategy.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 #define DELAY 4
 

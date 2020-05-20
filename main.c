@@ -1,12 +1,15 @@
-#include "sort_array.h"
 #include "sort_algo/sorting_strategy.h"
+#include "sort_array.h"
+#include <stdlib.h>
+#include <time.h>
 
-#define ARRAY_SIZE 320
+#define ARRAY_SIZE 1280
 
 int main(void)
 {
-  sorting_algo algos[] = {merge_sort, selection_sort, insertion_sort, bubble_sort};
-  
+  sorting_algo algos[] = {quick_sort};
+
+  srand(time(NULL)); // use current time as seed for random generator
   sort_array *arr = sort_array_new(ARRAY_SIZE, 0);
 
   int n = sizeof(algos)/sizeof(algos[0]);
