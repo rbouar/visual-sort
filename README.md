@@ -11,7 +11,7 @@ Here is a list of supported sorting algorithms :
 - [ ] Introsort
 - [ ] Heapsort
 - [ ] Cocktail shaker sort
-- [ ] Comb sort
+- [X] Comb sort
 - [ ] Odd–even sort
 
 ## Compilation

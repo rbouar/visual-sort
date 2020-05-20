@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-g -Wall
-LDFLAGS=-lSDL2
+LDFLAGS=-lSDL2 -lm
 
 EXEC=launch
 

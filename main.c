@@ -7,7 +7,7 @@
 
 int main(void)
 {
-  sorting_algo algos[] = {shell_sort};
+  sorting_algo algos[] = {comb_sort};
 
   srand(time(NULL)); // use current time as seed for random generator
   sort_array *arr = sort_array_new(ARRAY_SIZE, 0);
