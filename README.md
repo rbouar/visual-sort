@@ -7,7 +7,7 @@ Here is a list of supported sorting algorithms :
 - [X] Insertion sort
 - [X] Bubble sort
 - [X] Quick sort
-- [ ] Shell sort
+- [X] Shell sort
 - [ ] Introsort
 - [ ] Heapsort
 - [ ] Cocktail shaker sort

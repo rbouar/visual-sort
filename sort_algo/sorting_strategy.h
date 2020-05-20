@@ -10,5 +10,6 @@ void merge_sort(sort_array *array);
 void selection_sort(sort_array *array);
 void bubble_sort(sort_array *array);
 void quick_sort(sort_array *array);
+void shell_sort(sort_array *array);
 
 #endif
