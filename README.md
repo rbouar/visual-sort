@@ -10,8 +10,10 @@ Here is a list of supported sorting algorithms :
 - [x] Odd–even sort
 - [X] Merge sort
 - [x] Quick sort
+- [X] Bitonic sort
 - [ ] Heapsort
 - [ ] Smoothsort
+
 
 ## Compilation
 Type `make` for compiling the project.
