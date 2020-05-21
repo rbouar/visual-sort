@@ -11,7 +11,7 @@ Here is a list of supported sorting algorithms :
 - [X] Merge sort
 - [x] Quick sort
 - [X] Bitonic sort
-- [ ] Heapsort
+- [x] Heapsort
 - [ ] Smoothsort
 
 

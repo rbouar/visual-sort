@@ -15,7 +15,7 @@ void odd_even_sort  (sort_array *array);
 void merge_sort     (sort_array *array);
 void quick_sort     (sort_array *array);
 void bitonic_sort   (sort_array *array);
-//void heapsort       (sort_array *array);
+void heapsort       (sort_array *array);
 //void smoothsort     (sort_array *array);
 
 

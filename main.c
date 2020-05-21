@@ -7,7 +7,7 @@
 
 int main(void)
 {
-  sorting_algo algos[] = { bitonic_sort };
+  sorting_algo algos[] = { heapsort };
 
   srand(time(NULL)); // use current time as seed for random generator
   sort_array *arr = sort_array_new(ARRAY_SIZE, 0);
